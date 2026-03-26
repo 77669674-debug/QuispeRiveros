@@ -34,3 +34,17 @@ function sumaCuadrados(){
     });
 
 }
+
+function fibonacci(){
+
+    let n = document.getElementById("numFibo").value;
+    
+    fetch("operaciones.php?fibonacci=" + n)
+    .then(res => res.text())
+    .then(data => {
+    
+    document.getElementById("resultadoFibo").innerHTML = data;
+    
+    });
+    
+    }
